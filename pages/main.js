@@ -4,10 +4,16 @@ require.config({
 		jquery:"jquery",
 		API: 'API',
 		request: 'request',
-		data: '../components/data'
+		data: '../components/data',
+		imageCenter: '../components/imageCenter',
+		dialog: '../components/dialog',
+		button: '../components/button'
 	}
 })
-define(['jquery','data'],function($,data){
+define(['jquery','data','imageCenter','button'],function($,data,imageCenter,button){
 	var $ = $,
 		data = data;
+	var imageWrapList = document.querySelectorAll('.img-center');
+	imageCenter(imageWrapList,'wspectFill');
+	
 })
