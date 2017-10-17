@@ -1,0 +1,26 @@
+/**
+ * 定制image组件，图片可以根据自己的宽高比，
+ * 合理的缩放，保证在这个图片不变形的情况下，
+ * 尽可能的显示更多的内容
+ */
+.img-center{
+	width:200px;
+	height:150px;
+	margin:20px;
+	overflow: hidden;
+	position:relative;
+}
+.img-center img{
+	display: block;
+	position: absolute;
+}
+.img-center img.aspectFill-x{
+	width:100%;
+	top:50%;
+	transform:translateY(-50%);
+}
+.img-center img.aspectFill-y{
+	height:100%;
+	left:50%;
+	transform:translateX(-50%);
+}
